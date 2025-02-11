@@ -13,17 +13,22 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
-  overflow-x: hidden;  
+  overflow-x: hidden;
 }
-html, body {
+
+
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100% !important;
   height: 100% !important;
-  overflow-x: hidden; /* Evita el desbordamiento horizontal */
+  overflow-x: hidden;
+  /* Evita el desbordamiento horizontal */
 }
 
-nav, header {
+nav,
+header {
   width: 100%;
   max-width: 100%;
   overflow: hidden;
@@ -70,6 +75,10 @@ nav, header {
   .namesContainer {
     display: block;
     text-align: center;
+  }
+  
+  nav ul li a{
+    font-size: 10px;
   }
 
   .nameCard {
@@ -229,7 +238,7 @@ h2 {
 /* Lista de curiosidades */
 .curiosidades-list {
   max-width: 800px;
-  margin:10px;
+  margin: 10px;
   padding-left: 20px;
 }
 
