@@ -1,0 +1,296 @@
+/* Estilos generales */
+:root {
+  --bg-color: #0a0a0a;
+  --text-color: #e0e0e0;
+  --accent-color: #4a90e2;
+  --secondary-color: #2c3e50;
+  --card-bg: #1a1a1a;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.aporte-card img,
+.aplicacion-card img,
+.relevancia-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+
+.nameCard {
+  background-color: var(--card-bg);
+  padding: 25px !important;
+  margin: 0;
+  border-radius: 25px;
+}
+
+.topTittle {
+  margin-top: 50px !important;
+}
+
+.nombre {
+  font: bold;
+  font-size: 2em !important;
+}
+
+.namesContainer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .namesContainer {
+    display: block;
+    text-align: center;
+  }
+
+  .nameCard {
+    margin-bottom: 15px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  /* Agregado padding para separar del borde */
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 20px;
+}
+
+/* Header y navegación */
+header {
+  background-color: var(--secondary-color);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+/* Sección Hero */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(45deg, #1a1a1a, #2c3e50);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+.icon-container {
+  font-size: 4rem;
+  color: var(--accent-color);
+  animation: pulse 2s infinite;
+}
+
+/* Secciones generales */
+section {
+  padding: 80px 0;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Grids */
+.autores-grid,
+.aportes-grid,
+.aplicaciones-grid,
+.relevancia-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* Cards */
+.autor-card,
+.aporte-card,
+.aplicacion-card,
+.relevancia-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.autor-card:hover,
+.aporte-card:hover,
+.aplicacion-card:hover,
+.relevancia-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.autor-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+  /* Asegura que la imagen no se vea aplastada */
+}
+
+.aporte-card i {
+  font-size: 3rem;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+}
+
+/* Agregar imágenes en aportes principales */
+.aporte-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+/* Agregar espacio para imágenes en aplicaciones */
+.aplicacion-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+/* Lista de curiosidades */
+.curiosidades-list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+.curiosidades-list li {
+  margin-bottom: 15px;
+}
+
+/* Sección de relevancia actual */
+.conclusion {
+  max-width: 800px;
+  margin: 40px auto 0;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  margin: 15px;
+  /* Resalta el texto final */
+}
+
+/* Footer */
+footer {
+  background-color: var(--text-color);
+  color: black;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .autores-grid,
+  .aportes-grid,
+  .aplicaciones-grid,
+  .relevancia-grid {
+    grid-template-columns: 1fr;
+  }
+}
