@@ -16,6 +16,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  
 }
 
 .center {
@@ -218,7 +219,7 @@ h2 {
 /* Lista de curiosidades */
 .curiosidades-list {
   max-width: 800px;
-  margin: 0 auto;
+  margin:10px;
   padding-left: 20px;
 }
 
